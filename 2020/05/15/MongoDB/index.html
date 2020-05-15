@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>MongoDB基本使用 | 汪洋大海</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="mongodbMongoDB是专为可扩展性，高性能和高可用性而设计的数据库。它可以从单服务器部署扩展到大型、复杂的多数据中心架构。利用内存计算的优势，MongoDB能够提供高性能的数据读写操作。 MongoDB的本地复制和自动故障转移功能使您的应用程序具有企业级的可靠性和操作灵活性 MongoDB数据库基本用法show dbs:显示数据库列表show collections：显示当前数据库中的集合">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MongoDB基本使用">
+<meta property="og:url" content="https://wysdddh.github.io/2020/05/15/MongoDB/index.html">
+<meta property="og:site_name" content="汪洋大海">
+<meta property="og:description" content="mongodbMongoDB是专为可扩展性，高性能和高可用性而设计的数据库。它可以从单服务器部署扩展到大型、复杂的多数据中心架构。利用内存计算的优势，MongoDB能够提供高性能的数据读写操作。 MongoDB的本地复制和自动故障转移功能使您的应用程序具有企业级的可靠性和操作灵活性 MongoDB数据库基本用法show dbs:显示数据库列表show collections：显示当前数据库中的集合">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-05-15T10:10:08.000Z">
+<meta property="article:modified_time" content="2020-05-15T11:02:19.493Z">
+<meta property="article:author" content="汪洋">
+<meta property="article:tag" content="MongoDB">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="汪洋大海" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">汪洋大海</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">汪洋的hexo</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://wysdddh.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-MongoDB" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/05/15/MongoDB/" class="article-date">
+  <time datetime="2020-05-15T10:10:08.000Z" itemprop="datePublished">2020-05-15</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      MongoDB基本使用
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="mongodb"><a href="#mongodb" class="headerlink" title="mongodb"></a>mongodb</h2><p>MongoDB是专为可扩展性，高性能和高可用性而设计的数据库。它可以从单服务器部署扩展到大型、复杂的多数据中心架构。利用内存计算的优势，MongoDB能够提供高性能的数据读写操作。 MongoDB的本地复制和自动故障转移功能使您的应用程序具有企业级的可靠性和操作灵活性</p>
+<h2 id="MongoDB数据库基本用法"><a href="#MongoDB数据库基本用法" class="headerlink" title="MongoDB数据库基本用法"></a>MongoDB数据库基本用法</h2><p>show dbs:显示数据库列表<br>show collections：显示当前数据库中的集合（类似关系数据库中的表）<br>show users：显示用户<br>use <db name>：切换当前数据库，这和MS-SQL里面的意思一样<br>db.help()：显示数据库操作命令，里面有很多的命令<br>db.foo.help()：显示集合操作命令，同样有很多的命令，foo指的是当前数据库下，一个叫foo的集合，并非真正意义上的命令<br>db.foo.find()：对于当前数据库中的foo集合进行数据查找（由于没有条件，会列出所有数据）<br>db.foo.find( { a : 1 } )：对于当前数据库中的foo集合进行查找，条件是数据中有一个属性叫a，且a的值为1<br>MongoDB没有创建数据库的命令，但有类似的命令。<br>如：如果你想创建一个“myTest”的数据库，先运行use myTest命令，之后就做一些操作（如：db.createCollection(‘user’)）,这样就可以创建一个名叫“myTest”的数据库。</p>
+<h2 id="数据库常用命令"><a href="#数据库常用命令" class="headerlink" title="数据库常用命令"></a>数据库常用命令</h2><p>1、Help查看命令提示<br>help<br>db.help();<br>db.yourColl.help();<br>db.youColl.find().help();<br>rs.help();<br>2、切换/创建数据库<br>use yourDB; 当创建一个集合(table)的时候会自动创建当前数据库<br>3、查询所有数据库<br>show dbs;<br>4、删除当前使用数据库<br>db.dropDatabase();<br>5、从指定主机上克隆数据库<br>db.cloneDatabase(“127.0.0.1”); 将指定机器上的数据库的数据克隆到当前数据库<br>6、从指定的机器上复制指定数据库数据到某个数据库<br>db.copyDatabase(“mydb”, “temp”, “127.0.0.1”);将本机的mydb的数据复制到temp数据库中<br>7、修复当前数据库<br>db.repairDatabase();<br>8、查看当前使用的数据库<br>db.getName();<br>db; db和getName方法是一样的效果，都可以查询当前使用的数据库<br>9、显示当前db状态<br>db.stats();<br>10、当前db版本<br>db.version();<br>11、查看当前db的链接机器地址<br>db.getMongo();</p>
+<h2 id="Collection聚集集合"><a href="#Collection聚集集合" class="headerlink" title="Collection聚集集合"></a>Collection聚集集合</h2><p>1、创建一个聚集集合（table）<br>db.createCollection(“collName”, {size: 20, capped: 5, max: 100});<br>2、得到指定名称的聚集集合（table）<br>db.getCollection(“account”);<br>3、得到当前db的所有聚集集合<br>db.getCollectionNames();<br>4、显示当前db所有聚集索引的状态<br>db.printCollectionStats();</p>
+<h2 id="用户相关"><a href="#用户相关" class="headerlink" title="用户相关"></a>用户相关</h2><p>1、添加一个用户<br>db.addUser(“name”);<br>db.addUser(“userName”, “pwd123”, true); 添加用户、设置密码、是否只读<br>2、数据库认证、安全模式<br>db.auth(“userName”, “123123”);<br>3、显示当前所有用户<br>show users;<br>4、删除用户<br>db.removeUser(“userName”);</p>
+<h2 id="查看聚集集合基本信息"><a href="#查看聚集集合基本信息" class="headerlink" title="查看聚集集合基本信息"></a>查看聚集集合基本信息</h2><p>1、查看帮助 db.yourColl.help();<br>2、查询当前集合的数据条数 db.yourColl.count();<br>3、查看数据空间大小 db.userInfo.dataSize();<br>4、得到当前聚集集合所在的db db.userInfo.getDB();<br>5、得到当前聚集的状态 db.userInfo.stats();<br>6、得到聚集集合总大小 db.userInfo.totalSize();<br>7、聚集集合储存空间大小 db.userInfo.storageSize();<br>8、Shard版本信息 db.userInfo.getShardVersion()<br>9、聚集集合重命名 db.userInfo.renameCollection(“users”); 将userInfo重命名为users<br>10、删除当前聚集集合 db.userInfo.drop();</p>
+<h2 id="索引"><a href="#索引" class="headerlink" title="索引"></a>索引</h2><p>1、创建索引<br>db.userInfo.ensureIndex({name: 1});<br>db.userInfo.ensureIndex({name: 1, ts: -1});<br>2、查询当前聚集集合所有索引<br>db.userInfo.getIndexes();<br>3、查看总索引记录大小<br>db.userInfo.totalIndexSize();<br>4、读取当前集合的所有index信息<br>db.users.reIndex();<br>5、删除指定索引<br>db.users.dropIndex(“name_1”);<br>6、删除所有索引索引<br>db.users.dropIndexes();</p>
+<p>参考文档: <a href="https://www.jianshu.com/p/195b8f1601d1" target="_blank" rel="noopener">链接</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://wysdddh.github.io/2020/05/15/MongoDB/" data-id="cka83exfx0001ras6ez0kcbyu" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MongoDB/" rel="tag">MongoDB</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2020/05/14/mysql/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">mysql基本使用</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown/" rel="tag">Markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MongoDB/" rel="tag">MongoDB</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/h5Upload/" rel="tag">h5Upload</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mysql/" rel="tag">mysql</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/MongoDB/" style="font-size: 10px;">MongoDB</a> <a href="/tags/h5Upload/" style="font-size: 10px;">h5Upload</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">May 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/05/15/MongoDB/">MongoDB基本使用</a>
+          </li>
+        
+          <li>
+            <a href="/2020/05/14/mysql/">mysql基本使用</a>
+          </li>
+        
+          <li>
+            <a href="/2020/05/13/Markdown/">Markdown</a>
+          </li>
+        
+          <li>
+            <a href="/2020/05/12/h5Upload/">h5Upload</a>
+          </li>
+        
+          <li>
+            <a href="/2020/05/12/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">Contact me</h3>
+        <div class="widget">
+            <img src="./css/images/wechat.jpeg" class="imgStyle">
+        </div>
+    </div>
+
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 汪洋<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

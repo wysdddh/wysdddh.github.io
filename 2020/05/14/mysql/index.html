@@ -15,7 +15,7 @@
 <meta property="og:description" content="数据库（Database）是按照数据结构来组织、存储和管理数据的仓库，每个数据库都有一个或多个不同的API用于创建，访问，管理，搜索和复制所保存的数据。Mysql数据库，MySQL是一个关系型数据库管理系统，由瑞典MySQL AB公司开发，目前属于Oracle公司。MySQL是一种关联数据库管理系统，关联数据库将数据保存在不同的表中，而不是将所有数据放在一个大仓库内，这样就增加了速度并提高了灵活性">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-05-14T09:58:15.000Z">
-<meta property="article:modified_time" content="2020-05-14T10:35:26.530Z">
+<meta property="article:modified_time" content="2020-05-15T10:39:46.841Z">
 <meta property="article:author" content="汪洋">
 <meta property="article:tag" content="mysql">
 <meta name="twitter:card" content="summary">
@@ -96,7 +96,7 @@
         <p><strong>数据库（Database）是按照数据结构来组织、存储和管理数据的仓库，<br>每个数据库都有一个或多个不同的API用于创建，访问，管理，搜索和复制所保存的数据。<br>Mysql数据库，MySQL是一个关系型数据库管理系统，由瑞典MySQL AB公司开发，目前属于Oracle公司。MySQL是一种关联数据库管理系统，关联数据库将数据保存在不同的表中，而不是将所有数据放在一个大仓库内，这样就增加了速度并提高了灵活性。</strong></p>
 <p>术语：</p>
 <ul>
-<li>数据库: 数据库是一些关联表的集合。.</li>
+<li>数据库: 数据库是一些关联表的集合。</li>
 <li>数据表: 表是数据的矩阵。在一个数据库中的表看起来像一个简单的电子表格。</li>
 <li>列: 一列(数据元素) 包含了相同的数据, 例如邮政编码的数据。</li>
 <li>行：一行（=元组，或记录）是一组相关的数据，例如一条用户订阅的数据。</li>
@@ -111,7 +111,7 @@
 
 <h2 id="2-查看mysql版本"><a href="#2-查看mysql版本" class="headerlink" title="2. 查看mysql版本"></a>2. 查看mysql版本</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -V</span><br></pre></td></tr></table></figure>
 
-<h2 id="3-启动相应的MySQL服务"><a href="#3-启动相应的MySQL服务" class="headerlink" title="3. 启动相应的MySQL服务"></a>3. 启动相应的MySQL服务</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mysql.server start &#x2F;&#x2F;开始</span><br><span class="line">mysql.server start &#x2F;&#x2F;停止</span><br></pre></td></tr></table></figure>
+<h2 id="3-启动相应的MySQL服务"><a href="#3-启动相应的MySQL服务" class="headerlink" title="3. 启动相应的MySQL服务"></a>3. 启动相应的MySQL服务</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mysql.server start &#x2F;&#x2F;开始</span><br><span class="line">mysql.server stop &#x2F;&#x2F;停止</span><br></pre></td></tr></table></figure>
 
 
 <h2 id="一-、Mac终端的操作："><a href="#一-、Mac终端的操作：" class="headerlink" title="一 、Mac终端的操作："></a>一 、Mac终端的操作：</h2><h3 id="首先在终端-usr-local-mysql-bin-mysql-u-root-p"><a href="#首先在终端-usr-local-mysql-bin-mysql-u-root-p" class="headerlink" title="首先在终端 /usr/local/mysql/bin/mysql -u root -p"></a>首先在终端 /usr/local/mysql/bin/mysql -u root -p</h3><h3 id="然后输入密码就可以访问MySQL数据库，进行相应的操作"><a href="#然后输入密码就可以访问MySQL数据库，进行相应的操作" class="headerlink" title="然后输入密码就可以访问MySQL数据库，进行相应的操作"></a>然后输入密码就可以访问MySQL数据库，进行相应的操作</h3><h2 id="二、数据库的基本操作"><a href="#二、数据库的基本操作" class="headerlink" title="二、数据库的基本操作"></a>二、数据库的基本操作</h2><h3 id="1-创建数据表"><a href="#1-创建数据表" class="headerlink" title="1.创建数据表"></a>1.创建数据表</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">create database fistTestDatabase;</span><br></pre></td></tr></table></figure>
@@ -139,7 +139,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://wysdddh.github.io/2020/05/14/mysql/" data-id="cka6n0irt0003cus627b2dupx" class="article-share-link">Share</a>
+      <a data-url="https://wysdddh.github.io/2020/05/14/mysql/" data-id="cka83exg20004ras601wueteo" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mysql/" rel="tag">mysql</a></li></ul>
@@ -149,6 +149,15 @@
   
     
 <nav id="article-nav">
+  
+    <a href="/2020/05/15/MongoDB/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          MongoDB基本使用
+        
+      </div>
+    </a>
   
   
     <a href="/2020/05/13/Markdown/" id="article-nav-older" class="article-nav-link-wrap">
@@ -172,7 +181,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown/" rel="tag">Markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/h5Upload/" rel="tag">h5Upload</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mysql/" rel="tag">mysql</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown/" rel="tag">Markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MongoDB/" rel="tag">MongoDB</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/h5Upload/" rel="tag">h5Upload</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mysql/" rel="tag">mysql</a></li></ul>
     </div>
   </div>
 
@@ -182,7 +191,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/h5Upload/" style="font-size: 10px;">h5Upload</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a>
+      <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/MongoDB/" style="font-size: 10px;">MongoDB</a> <a href="/tags/h5Upload/" style="font-size: 10px;">h5Upload</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a>
     </div>
   </div>
 
@@ -202,6 +211,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2020/05/15/MongoDB/">MongoDB基本使用</a>
+          </li>
         
           <li>
             <a href="/2020/05/14/mysql/">mysql基本使用</a>

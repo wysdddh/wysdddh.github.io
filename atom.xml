@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://wysdddh.github.io/"/>
-  <updated>2020-05-15T11:02:19.493Z</updated>
+  <updated>2020-05-20T09:24:56.634Z</updated>
   <id>https://wysdddh.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>npm</title>
+    <link href="https://wysdddh.github.io/2020/05/20/npm/"/>
+    <id>https://wysdddh.github.io/2020/05/20/npm/</id>
+    <published>2020-05-20T07:27:10.000Z</published>
+    <updated>2020-05-20T09:24:56.634Z</updated>
+    
+    <content type="html"><![CDATA[<p>npm发布包</p><h2 id="1、注册npm账户"><a href="#1、注册npm账户" class="headerlink" title="1、注册npm账户"></a>1、注册npm账户</h2><p>注册地址：<a href="https://npmjs.com/" target="_blank" rel="noopener">https://npmjs.com</a></p><h2 id="2、全局安装nrm"><a href="#2、全局安装nrm" class="headerlink" title="2、全局安装nrm"></a>2、全局安装nrm</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i nrm -g</span><br></pre></td></tr></table></figure><h3 id="nrm是npm仓库管理软件，可用于npm仓库的快速切换"><a href="#nrm是npm仓库管理软件，可用于npm仓库的快速切换" class="headerlink" title="nrm是npm仓库管理软件，可用于npm仓库的快速切换"></a>nrm是npm仓库管理软件，可用于npm仓库的快速切换</h3><h4 id="nrm常用命令"><a href="#nrm常用命令" class="headerlink" title="nrm常用命令"></a>nrm常用命令</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">nrm &#x2F;&#x2F;展示nrm可用命令</span><br><span class="line">nrm ls &#x2F;&#x2F;列出已经配置的所有仓库</span><br><span class="line">nrm test &#x2F;&#x2F;测试所有仓库的响应时间</span><br><span class="line">nrm add &lt;registry&gt; &lt;url&gt; &#x2F;&#x2F;新增仓库</span><br><span class="line">nrm use &lt;registry&gt; &#x2F;&#x2F;切换仓库</span><br></pre></td></tr></table></figure><h2 id="3、发布包"><a href="#3、发布包" class="headerlink" title="3、发布包"></a>3、发布包</h2><h3 id="创建项目包ywy-test-pkg，文件如下"><a href="#创建项目包ywy-test-pkg，文件如下" class="headerlink" title="创建项目包ywy-test-pkg，文件如下"></a>创建项目包ywy-test-pkg，文件如下</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">└── ywy-test-pkg</span><br><span class="line">    ├── README.md</span><br><span class="line">    ├── index.js</span><br><span class="line">    └── package.json</span><br></pre></td></tr></table></figure><h3 id="发布"><a href="#发布" class="headerlink" title="发布"></a>发布</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm publish</span><br></pre></td></tr></table></figure><p>然后就能在npm官网上搜到了</p><h2 id="查看所有版本"><a href="#查看所有版本" class="headerlink" title="查看所有版本"></a>查看所有版本</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm view ywy-test-pkg versions</span><br></pre></td></tr></table></figure><h2 id="废弃指定版本"><a href="#废弃指定版本" class="headerlink" title="废弃指定版本"></a>废弃指定版本</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">语法：npm deprecate &lt;pkg&gt;[@&lt;version&gt;] &lt;message&gt;</span><br><span class="line"></span><br><span class="line">npm deprecate ywy-test-pkg@1.1.0 &#39;test deprecate&#39;</span><br></pre></td></tr></table></figure><h2 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm unpublish ywy-test-pkg --force</span><br></pre></td></tr></table></figure><p>参考文档: <a href="https://segmentfault.com/a/1190000017461666" target="_blank" rel="noopener">链接</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;npm发布包&lt;/p&gt;
+&lt;h2 id=&quot;1、注册npm账户&quot;&gt;&lt;a href=&quot;#1、注册npm账户&quot; class=&quot;headerlink&quot; title=&quot;1、注册npm账户&quot;&gt;&lt;/a&gt;1、注册npm账户&lt;/h2&gt;&lt;p&gt;注册地址：&lt;a href=&quot;https://npmjs.
+      
+    
+    </summary>
+    
+    
+    
+      <category term="npm" scheme="https://wysdddh.github.io/tags/npm/"/>
+    
+  </entry>
   
   <entry>
     <title>MongoDB基本使用</title>

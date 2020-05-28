@@ -70,6 +70,60 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-nginx" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/05/28/nginx/" class="article-date">
+  <time datetime="2020-05-28T10:17:14.000Z" itemprop="datePublished">2020-05-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/05/28/nginx/">nginx</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Nginx是一款开源的web和反向代理服务器，查看官网。具有高性能、高并发、低内存特点，另外还有一些特色的Web服务器功能，如负载均衡、缓存、访问和带宽控制。</p>
+<p>MAC环境下有一个好用的软件安装方法，使用homebrew来安装各个软件既快捷又不用考虑依赖包的问题。</p>
+<h3 id="1、安装nginx"><a href="#1、安装nginx" class="headerlink" title="1、安装nginx"></a>1、安装nginx</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install nginx</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="2、启动nginx"><a href="#2、启动nginx" class="headerlink" title="2、启动nginx"></a>2、启动nginx</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew services start nginx</span><br></pre></td></tr></table></figure>
+
+<h3 id="3、nginx文件目录"><a href="#3、nginx文件目录" class="headerlink" title="3、nginx文件目录"></a>3、nginx文件目录</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&#x2F;usr&#x2F;local&#x2F;Cellar&#x2F;nginx    nginx安装文件目录</span><br><span class="line"></span><br><span class="line">&#x2F;usr&#x2F;local&#x2F;etc&#x2F;nginx    nginx配置文件目录</span><br><span class="line"></span><br><span class="line">&#x2F;usr&#x2F;local&#x2F;etc&#x2F;nginx&#x2F;nginx.conf    config文件目录</span><br><span class="line"></span><br><span class="line">&#x2F;private&#x2F;etc&#x2F;hosts    系统hosts位置</span><br></pre></td></tr></table></figure>
+
+<h3 id="4、nginx常用命令"><a href="#4、nginx常用命令" class="headerlink" title="4、nginx常用命令"></a>4、nginx常用命令</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">nginx  #启动nginx</span><br><span class="line">nginx -s quit  #快速停止nginx</span><br><span class="line">nginx -V #查看版本，以及配置文件地址</span><br><span class="line">nginx -v #查看版本</span><br><span class="line">nginx -s reload|reopen|stop|quit   #重新加载配置|重启|快速停止|安全关闭nginx</span><br><span class="line">nginx -h #帮助</span><br></pre></td></tr></table></figure>
+
+<h3 id="5、卸载ngix"><a href="#5、卸载ngix" class="headerlink" title="5、卸载ngix"></a>5、卸载ngix</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew uninstall nginx</span><br></pre></td></tr></table></figure>
+
+
+
+<p>参考文档: <a href="https://www.jianshu.com/p/026d67cc6cb1" target="_blank" rel="noopener">链接</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://wysdddh.github.io/2020/05/28/nginx/" data-id="ckaqmvq7g0008v5s6f4jdgexp" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nginx/" rel="tag">nginx</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-mac" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/05/25/mac/" class="article-date">
@@ -106,7 +160,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://wysdddh.github.io/2020/05/25/mac/" data-id="ckalrrpr00005pws64j60e9ig" class="article-share-link">Share</a>
+      <a data-url="https://wysdddh.github.io/2020/05/25/mac/" data-id="ckaqmvq7h0009v5s6bf9kagwe" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Mac/" rel="tag">Mac</a></li></ul>
@@ -163,7 +217,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://wysdddh.github.io/2020/05/20/npm/" data-id="ckalrrpr20008pws654fl49qs" class="article-share-link">Share</a>
+      <a data-url="https://wysdddh.github.io/2020/05/20/npm/" data-id="ckaqmvq7i000bv5s6dxy622ee" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/npm/" rel="tag">npm</a></li></ul>
@@ -209,7 +263,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://wysdddh.github.io/2020/05/15/MongoDB/" data-id="ckalrrpqt0001pws68avh6fv4" class="article-share-link">Share</a>
+      <a data-url="https://wysdddh.github.io/2020/05/15/MongoDB/" data-id="ckaqmvq790003v5s69g67goag" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MongoDB/" rel="tag">MongoDB</a></li></ul>
@@ -289,7 +343,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://wysdddh.github.io/2020/05/14/mysql/" data-id="ckalrrpr30009pws61r683wx4" class="article-share-link">Share</a>
+      <a data-url="https://wysdddh.github.io/2020/05/14/mysql/" data-id="ckaqmvq7e0005v5s66ccheaai" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mysql/" rel="tag">mysql</a></li></ul>
@@ -353,7 +407,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://wysdddh.github.io/2020/05/13/Markdown/" data-id="ckalrrpqm0000pws69veacprx" class="article-share-link">Share</a>
+      <a data-url="https://wysdddh.github.io/2020/05/13/Markdown/" data-id="ckaqmvq750001v5s64z9c0sqj" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Markdown/" rel="tag">Markdown</a></li></ul>
@@ -388,14 +442,14 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>H5页面调取摄像头</p>
-<h2 id="H5页面调取摄像头摄像上传的两种方式"><a href="#H5页面调取摄像头摄像上传的两种方式" class="headerlink" title="H5页面调取摄像头摄像上传的两种方式"></a>H5页面调取摄像头摄像上传的两种方式</h2><h3 id="代码片段"><a href="#代码片段" class="headerlink" title="代码片段"></a>代码片段</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line"> </span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=<span class="string">"utf-8"</span> /&gt;</span><br><span class="line">    &lt;meta http-equiv=<span class="string">"X-UA-Compatible"</span> content=<span class="string">"IE=edge"</span>&gt;</span><br><span class="line">    &lt;title&gt;H5 Upload&lt;/title&gt;</span><br><span class="line">    &lt;meta name=<span class="string">"viewport"</span> content=<span class="string">"width=device-width, initial-scale=1"</span>&gt;</span><br><span class="line">    &lt;style&gt;</span><br><span class="line">        * &#123;</span><br><span class="line">            margin: 0;</span><br><span class="line">            padding: 0;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        .upload &#123;</span><br><span class="line">            position: relative;</span><br><span class="line">            margin: 0 auto;</span><br><span class="line">            width: 100%;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        .upload button &#123;</span><br><span class="line">            display: block;</span><br><span class="line">            width: 100%;</span><br><span class="line">            height: 50px;</span><br><span class="line">            background-color: orange;</span><br><span class="line">            border: none;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        .upload input &#123;</span><br><span class="line">            position: absolute;</span><br><span class="line">            left: 0;</span><br><span class="line">            top: 0;</span><br><span class="line">            display: block;</span><br><span class="line">            width: 100%;</span><br><span class="line">            height: 50px;</span><br><span class="line">            opacity: 0;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        .upload img &#123;</span><br><span class="line">            margin: 0 auto;</span><br><span class="line">            display: block;</span><br><span class="line">            width: 100%;</span><br><span class="line">        &#125;</span><br><span class="line">    &lt;/style&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line"> </span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;div class=<span class="string">"upload"</span>&gt;</span><br><span class="line">        &lt;button&gt;上传文件(base64)&lt;/button&gt;</span><br><span class="line">        &lt;input <span class="built_in">type</span>=<span class="string">"file"</span> accept=<span class="string">"video/*"</span> capture=<span class="string">"camcorder"</span> id=<span class="string">"upload"</span>&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;div class=<span class="string">"upload"</span>&gt;</span><br><span class="line">        &lt;button&gt;上传文件(二进制)&lt;/button&gt;</span><br><span class="line">        &lt;input <span class="built_in">type</span>=<span class="string">"file"</span> accept=<span class="string">"video/*"</span> capture=<span class="string">"camcorder"</span> id=<span class="string">"upload1"</span>&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;script&gt;</span><br><span class="line">        var upload = &#123;</span><br><span class="line">            init: <span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">                this.event();</span><br><span class="line">            &#125;,</span><br><span class="line">            event: <span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">                var _this = this;</span><br><span class="line">                // 方式一：采用FileReader方式</span><br><span class="line">                document.getElementById(<span class="string">'upload'</span>).addEventListener(<span class="string">'change'</span>, <span class="keyword">function</span>(event) &#123;</span><br><span class="line">                        var that = this;</span><br><span class="line">                        var file = event.target.files[0];</span><br><span class="line">                        var reader = new FileReader();</span><br><span class="line">                        reader.onload = <span class="keyword">function</span>(e) &#123; //文件读取成功完成时触发</span><br><span class="line">                            var video = document.createElement(<span class="string">'video'</span>);</span><br><span class="line">                            video.setAttribute(<span class="string">'controls'</span>, <span class="literal">true</span>)</span><br><span class="line">                            video.src = this.result; //this.result为base64文件路径</span><br><span class="line">                            _this.insertAfter(video, that);</span><br><span class="line">                        &#125;</span><br><span class="line">                        reader.readAsDataURL(this.files[0]); // 读出 base64</span><br><span class="line">                    &#125;)</span><br><span class="line">                    // 方式二：采用二进制形式</span><br><span class="line">                document.getElementById(<span class="string">'upload1'</span>).addEventListener(<span class="string">'change'</span>, <span class="keyword">function</span>(e) &#123;</span><br><span class="line">                    var that = this;</span><br><span class="line">                    var file = e.target.files[0];</span><br><span class="line">                    var blob = new Blob([file]), // 文件转化成二进制文件</span><br><span class="line">                        url = URL.createObjectURL(blob); //转化成url</span><br><span class="line">                    var video = document.createElement(<span class="string">'video'</span>);</span><br><span class="line">                    video.setAttribute(<span class="string">'controls'</span>, <span class="literal">true</span>);</span><br><span class="line">                    video.setAttribute(<span class="string">'src'</span>, url);</span><br><span class="line">                    _this.insertAfter(video, that);</span><br><span class="line">                    video.onload = <span class="keyword">function</span>(e) &#123;</span><br><span class="line">                        URL.revokeObjectURL(this.src); // 释放createObjectURL创建的对象</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;)</span><br><span class="line">            &#125;,</span><br><span class="line">            insertAfter: <span class="keyword">function</span>(newElement, targetElement) &#123;</span><br><span class="line">                var parent = targetElement.parentNode;</span><br><span class="line">                <span class="keyword">if</span> (parent.lastChild == targetElement) &#123;</span><br><span class="line">                    // 如果最后的节点是目标元素，则直接添加。因为默认是最后</span><br><span class="line">                    parent.appendChild(newElement);</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    parent.insertBefore(newElement, targetElement.nextSibling);</span><br><span class="line">                    //如果不是，则插入在目标元素的下一个兄弟节点 的前面。也就是目标元素的后面</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"> </span><br><span class="line">        upload.init();</span><br><span class="line">    &lt;/script&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line"> </span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="H5页面调取摄像头摄像上传的两种方式"><a href="#H5页面调取摄像头摄像上传的两种方式" class="headerlink" title="H5页面调取摄像头摄像上传的两种方式"></a>H5页面调取摄像头摄像上传的两种方式</h2><h3 id="代码片段"><a href="#代码片段" class="headerlink" title="代码片段"></a>代码片段</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line"> </span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset&#x3D;&quot;utf-8&quot; &#x2F;&gt;</span><br><span class="line">    &lt;meta http-equiv&#x3D;&quot;X-UA-Compatible&quot; content&#x3D;&quot;IE&#x3D;edge&quot;&gt;</span><br><span class="line">    &lt;title&gt;H5 Upload&lt;&#x2F;title&gt;</span><br><span class="line">    &lt;meta name&#x3D;&quot;viewport&quot; content&#x3D;&quot;width&#x3D;device-width, initial-scale&#x3D;1&quot;&gt;</span><br><span class="line">    &lt;style&gt;</span><br><span class="line">        * &#123;</span><br><span class="line">            margin: 0;</span><br><span class="line">            padding: 0;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        .upload &#123;</span><br><span class="line">            position: relative;</span><br><span class="line">            margin: 0 auto;</span><br><span class="line">            width: 100%;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        .upload button &#123;</span><br><span class="line">            display: block;</span><br><span class="line">            width: 100%;</span><br><span class="line">            height: 50px;</span><br><span class="line">            background-color: orange;</span><br><span class="line">            border: none;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        .upload input &#123;</span><br><span class="line">            position: absolute;</span><br><span class="line">            left: 0;</span><br><span class="line">            top: 0;</span><br><span class="line">            display: block;</span><br><span class="line">            width: 100%;</span><br><span class="line">            height: 50px;</span><br><span class="line">            opacity: 0;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        .upload img &#123;</span><br><span class="line">            margin: 0 auto;</span><br><span class="line">            display: block;</span><br><span class="line">            width: 100%;</span><br><span class="line">        &#125;</span><br><span class="line">    &lt;&#x2F;style&gt;</span><br><span class="line">&lt;&#x2F;head&gt;</span><br><span class="line"> </span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;div class&#x3D;&quot;upload&quot;&gt;</span><br><span class="line">        &lt;button&gt;上传文件(base64)&lt;&#x2F;button&gt;</span><br><span class="line">        &lt;input type&#x3D;&quot;file&quot; accept&#x3D;&quot;video&#x2F;*&quot; capture&#x3D;&quot;camcorder&quot; id&#x3D;&quot;upload&quot;&gt;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">    &lt;div class&#x3D;&quot;upload&quot;&gt;</span><br><span class="line">        &lt;button&gt;上传文件(二进制)&lt;&#x2F;button&gt;</span><br><span class="line">        &lt;input type&#x3D;&quot;file&quot; accept&#x3D;&quot;video&#x2F;*&quot; capture&#x3D;&quot;camcorder&quot; id&#x3D;&quot;upload1&quot;&gt;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">    &lt;script&gt;</span><br><span class="line">        var upload &#x3D; &#123;</span><br><span class="line">            init: function() &#123;</span><br><span class="line">                this.event();</span><br><span class="line">            &#125;,</span><br><span class="line">            event: function() &#123;</span><br><span class="line">                var _this &#x3D; this;</span><br><span class="line">                &#x2F;&#x2F; 方式一：采用FileReader方式</span><br><span class="line">                document.getElementById(&#39;upload&#39;).addEventListener(&#39;change&#39;, function(event) &#123;</span><br><span class="line">                        var that &#x3D; this;</span><br><span class="line">                        var file &#x3D; event.target.files[0];</span><br><span class="line">                        var reader &#x3D; new FileReader();</span><br><span class="line">                        reader.onload &#x3D; function(e) &#123; &#x2F;&#x2F;文件读取成功完成时触发</span><br><span class="line">                            var video &#x3D; document.createElement(&#39;video&#39;);</span><br><span class="line">                            video.setAttribute(&#39;controls&#39;, true)</span><br><span class="line">                            video.src &#x3D; this.result; &#x2F;&#x2F;this.result为base64文件路径</span><br><span class="line">                            _this.insertAfter(video, that);</span><br><span class="line">                        &#125;</span><br><span class="line">                        reader.readAsDataURL(this.files[0]); &#x2F;&#x2F; 读出 base64</span><br><span class="line">                    &#125;)</span><br><span class="line">                    &#x2F;&#x2F; 方式二：采用二进制形式</span><br><span class="line">                document.getElementById(&#39;upload1&#39;).addEventListener(&#39;change&#39;, function(e) &#123;</span><br><span class="line">                    var that &#x3D; this;</span><br><span class="line">                    var file &#x3D; e.target.files[0];</span><br><span class="line">                    var blob &#x3D; new Blob([file]), &#x2F;&#x2F; 文件转化成二进制文件</span><br><span class="line">                        url &#x3D; URL.createObjectURL(blob); &#x2F;&#x2F;转化成url</span><br><span class="line">                    var video &#x3D; document.createElement(&#39;video&#39;);</span><br><span class="line">                    video.setAttribute(&#39;controls&#39;, true);</span><br><span class="line">                    video.setAttribute(&#39;src&#39;, url);</span><br><span class="line">                    _this.insertAfter(video, that);</span><br><span class="line">                    video.onload &#x3D; function(e) &#123;</span><br><span class="line">                        URL.revokeObjectURL(this.src); &#x2F;&#x2F; 释放createObjectURL创建的对象</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;)</span><br><span class="line">            &#125;,</span><br><span class="line">            insertAfter: function(newElement, targetElement) &#123;</span><br><span class="line">                var parent &#x3D; targetElement.parentNode;</span><br><span class="line">                if (parent.lastChild &#x3D;&#x3D; targetElement) &#123;</span><br><span class="line">                    &#x2F;&#x2F; 如果最后的节点是目标元素，则直接添加。因为默认是最后</span><br><span class="line">                    parent.appendChild(newElement);</span><br><span class="line">                &#125; else &#123;</span><br><span class="line">                    parent.insertBefore(newElement, targetElement.nextSibling);</span><br><span class="line">                    &#x2F;&#x2F;如果不是，则插入在目标元素的下一个兄弟节点 的前面。也就是目标元素的后面</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"> </span><br><span class="line">        upload.init();</span><br><span class="line">    &lt;&#x2F;script&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br><span class="line"> </span><br><span class="line">&lt;&#x2F;html&gt;</span><br></pre></td></tr></table></figure>
 
 <p>参考文档: <a href="https://blog.csdn.net/przlovecsdn/article/details/82256413" target="_blank" rel="noopener">链接</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://wysdddh.github.io/2020/05/12/h5Upload/" data-id="ckalrrpqx0003pws62ay95bi2" class="article-share-link">Share</a>
+      <a data-url="https://wysdddh.github.io/2020/05/12/h5Upload/" data-id="ckaqmvq6u0000v5s6cljr6bgb" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/h5Upload/" rel="tag">h5Upload</a></li></ul>
@@ -430,23 +484,23 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new &quot;My New Post&quot;</span><br></pre></td></tr></table></figure>
 
 <p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
 
 <p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
 
 <p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://wysdddh.github.io/2020/05/12/hello-world/" data-id="ckalrrpqz0004pws6ajp5bt8g" class="article-share-link">Share</a>
+      <a data-url="https://wysdddh.github.io/2020/05/12/hello-world/" data-id="ckaqmvq7b0004v5s63erfcgz9" class="article-share-link">Share</a>
       
       
     </footer>
@@ -469,7 +523,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mac/" rel="tag">Mac</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown/" rel="tag">Markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MongoDB/" rel="tag">MongoDB</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/h5Upload/" rel="tag">h5Upload</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mysql/" rel="tag">mysql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/npm/" rel="tag">npm</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mac/" rel="tag">Mac</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown/" rel="tag">Markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MongoDB/" rel="tag">MongoDB</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/h5Upload/" rel="tag">h5Upload</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mysql/" rel="tag">mysql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nginx/" rel="tag">nginx</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/npm/" rel="tag">npm</a></li></ul>
     </div>
   </div>
 
@@ -479,7 +533,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Mac/" style="font-size: 10px;">Mac</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/MongoDB/" style="font-size: 10px;">MongoDB</a> <a href="/tags/h5Upload/" style="font-size: 10px;">h5Upload</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/npm/" style="font-size: 10px;">npm</a>
+      <a href="/tags/Mac/" style="font-size: 10px;">Mac</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/MongoDB/" style="font-size: 10px;">MongoDB</a> <a href="/tags/h5Upload/" style="font-size: 10px;">h5Upload</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/nginx/" style="font-size: 10px;">nginx</a> <a href="/tags/npm/" style="font-size: 10px;">npm</a>
     </div>
   </div>
 
@@ -501,6 +555,10 @@
       <ul>
         
           <li>
+            <a href="/2020/05/28/nginx/">nginx</a>
+          </li>
+        
+          <li>
             <a href="/2020/05/25/mac/">Mac查看端口号是否被占用及释放</a>
           </li>
         
@@ -514,10 +572,6 @@
         
           <li>
             <a href="/2020/05/14/mysql/">mysql基本使用</a>
-          </li>
-        
-          <li>
-            <a href="/2020/05/13/Markdown/">Markdown基本语法</a>
           </li>
         
       </ul>

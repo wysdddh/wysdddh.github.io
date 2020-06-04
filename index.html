@@ -70,6 +70,69 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-redis" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/06/04/redis/" class="article-date">
+  <time datetime="2020-06-04T03:44:57.000Z" itemprop="datePublished">2020-06-04</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/06/04/redis/">homebrew安装redis</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="homeBrew的操作命令如下"><a href="#homeBrew的操作命令如下" class="headerlink" title="homeBrew的操作命令如下:"></a>homeBrew的操作命令如下:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">brew search **  &#x2F;&#x2F;查找某个软件包</span><br><span class="line">brew list  &#x2F;&#x2F;列出已经安装的软件的包</span><br><span class="line">brew install ** &#x2F;&#x2F;安装某个软件包,默认安装的是稳定版本</span><br><span class="line">brew uninstall **&#x2F;&#x2F;卸载某个软件的包</span><br><span class="line">brew upgrade ** &#x2F;&#x2F;更新某个软件包</span><br><span class="line">brew info ** &#x2F;&#x2F;查看指定软件包的说明</span><br><span class="line">brew cache clean &#x2F;&#x2F;清理缓存</span><br></pre></td></tr></table></figure>
+
+<h3 id="通过homeBrew安装redis"><a href="#通过homeBrew安装redis" class="headerlink" title="通过homeBrew安装redis"></a>通过homeBrew安装redis</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"> brew search redis</span><br><span class="line"> &#x2F;&#x2F;出现如下</span><br><span class="line"> &#x3D;&#x3D;&gt; Searching local taps...</span><br><span class="line">hiredis         redis           redis-leveldb   redis@2.8       redis@3.2</span><br><span class="line">&#x3D;&#x3D;&gt; Searching taps on GitHub...</span><br><span class="line">homebrew&#x2F;cask&#x2F;redis-app</span><br><span class="line">&#x3D;&#x3D;&gt; Searching blacklisted, migrated and deleted formulae...</span><br></pre></td></tr></table></figure>
+
+<h3 id="安装redis3-2版本"><a href="#安装redis3-2版本" class="headerlink" title="安装redis3.2版本"></a>安装redis3.2版本</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install redis@3.2</span><br></pre></td></tr></table></figure>
+
+<h3 id="安装完成提示如下"><a href="#安装完成提示如下" class="headerlink" title="安装完成提示如下"></a>安装完成提示如下</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;把redis的环境变量配置到.zshrc中</span><br><span class="line">If you need to have redis@3.2 first in your PATH run:</span><br><span class="line">  echo &#39;export PATH&#x3D;&quot;&#x2F;usr&#x2F;local&#x2F;opt&#x2F;redis@3.2&#x2F;bin:$PATH&quot;&#39; &gt;&gt; ~&#x2F;.zshrc</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">To have launchd start redis@3.2 now and restart at login:</span><br><span class="line">&#x2F;&#x2F;使用launchctl brew启动</span><br><span class="line">  brew services start redis@3.2</span><br><span class="line">  ### 使用配置文件启动</span><br><span class="line">Or, if you don&#39;t want&#x2F;need a background service you can just run:</span><br><span class="line">  redis-server &#x2F;usr&#x2F;local&#x2F;etc&#x2F;redis.conf</span><br><span class="line">&#x3D;&#x3D;&gt; Summary</span><br><span class="line">🍺  &#x2F;usr&#x2F;local&#x2F;Cellar&#x2F;redis@3.2&#x2F;3.2.12: 13 files, 1.7MB</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;usr&#x2F;local&#x2F;etc 下修改redis.config找到</span><br><span class="line">daemonize no改成yes 以守护进程的方式启动</span><br><span class="line">配置环境变量echo &#39;export PATH&#x3D;&quot;&#x2F;usr&#x2F;local&#x2F;opt&#x2F;redis@3.2&#x2F;bin:$PATH&quot;&#39; &gt;&gt; ~&#x2F;.zshrc</span><br><span class="line"> 启动:brew services start redis@3.2</span><br><span class="line">或者使用</span><br><span class="line">redis-server &#x2F;usr&#x2F;local&#x2F;etc&#x2F;redis.conf启动</span><br><span class="line">查看进程</span><br><span class="line">ps axu | grep redis</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">isole            84721   0.0  0.0  4267768    900 s000  S+   10:08上午   0:00.00 grep redis</span><br><span class="line">isole            84501   0.0  0.0  4309180   1568   ??  Ss   10:06上午   0:00.07 redis-server 127.0.0.1:6379</span><br></pre></td></tr></table></figure>
+
+<h3 id="连接客户端"><a href="#连接客户端" class="headerlink" title="连接客户端:"></a>连接客户端:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">redis-cli -h 127.0.0.1 -p 6379</span><br></pre></td></tr></table></figure>
+
+<h3 id="如下"><a href="#如下" class="headerlink" title="如下:"></a>如下:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6379&gt; get(&quot;123&quot;)</span><br></pre></td></tr></table></figure>
+
+<h3 id="关闭"><a href="#关闭" class="headerlink" title="关闭"></a>关闭</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">redis-cli shutdown</span><br></pre></td></tr></table></figure>
+<h3 id="杀死"><a href="#杀死" class="headerlink" title="杀死"></a>杀死</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pkill redis-server</span><br></pre></td></tr></table></figure>
+
+<h3 id="关于redis-conf配置文件的说明"><a href="#关于redis-conf配置文件的说明" class="headerlink" title="关于redis.conf配置文件的说明"></a>关于redis.conf配置文件的说明</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">redis默认是前台启动,不是以守护进程的方式进行:daemonize no,把这里修改成yes,就可以让redis以守护进程的方式启动。</span><br><span class="line">当redis使用守护进程方式运行,会默认把pid写入&#x2F;var&#x2F;run&#x2F;reids.pid文件中,可以通过pidfile &#x2F;var&#x2F;run&#x2F;redis.pid进行指定。</span><br><span class="line">端口号指定,这个不用多说了,默认是6379,可以根据需要自己修改。</span><br><span class="line">客户端如果一直连接着不释放的话会自动关闭连接,这是通过timeout 100来设定的,如果设置为0表示不会自动关闭。</span><br><span class="line">设置redis数据库的数量, databases 16 默认是16</span><br><span class="line">既然redis是一个数据库,就代表如果需要连接的话可能需要配置一个密码,默认是不需要密码的。requirepass foobared,客户端在链接时需要通过AUTH&lt;pwd&gt;命令提供密码。</span><br><span class="line">等等还有很多，这里仅仅介绍了一点点的命令，直接修改redis.conf是一个方法,但是还有另外一个方法就是通过命令行去修改。</span><br><span class="line">redis 127.0.0.1:6379&gt; CONFIG GET CONFIG_SETTING_NAME 查看某个配置</span><br><span class="line">比如 : 我们要查看daemonize 直接输入</span><br><span class="line">redis 127.0.0.1:6379&gt; CONFIG GET daemonize</span><br><span class="line">修改的话直接:</span><br><span class="line">redis 127.0.0.1:6379&gt;CONFIG SET daemonize yes这样就可以了。</span><br></pre></td></tr></table></figure>
+
+
+<p>参考文档: <a href="https://www.jianshu.com/p/e1e5717049e8" target="_blank" rel="noopener">链接</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://wysdddh.github.io/2020/06/04/redis/" data-id="ckb0gqe3c000cwvs6blcr9e35" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/redis/" rel="tag">redis</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-nginx" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/05/28/nginx/" class="article-date">
@@ -112,7 +175,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://wysdddh.github.io/2020/05/28/nginx/" data-id="ckaqmvq7g0008v5s6f4jdgexp" class="article-share-link">Share</a>
+      <a data-url="https://wysdddh.github.io/2020/05/28/nginx/" data-id="ckb0gqe330005wvs6cwvdb0sq" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nginx/" rel="tag">nginx</a></li></ul>
@@ -160,7 +223,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://wysdddh.github.io/2020/05/25/mac/" data-id="ckaqmvq7h0009v5s6bf9kagwe" class="article-share-link">Share</a>
+      <a data-url="https://wysdddh.github.io/2020/05/25/mac/" data-id="ckb0gqe370009wvs68ilkg4m2" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Mac/" rel="tag">Mac</a></li></ul>
@@ -217,7 +280,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://wysdddh.github.io/2020/05/20/npm/" data-id="ckaqmvq7i000bv5s6dxy622ee" class="article-share-link">Share</a>
+      <a data-url="https://wysdddh.github.io/2020/05/20/npm/" data-id="ckb0gqe350006wvs6hqzn2ig5" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/npm/" rel="tag">npm</a></li></ul>
@@ -263,7 +326,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://wysdddh.github.io/2020/05/15/MongoDB/" data-id="ckaqmvq790003v5s69g67goag" class="article-share-link">Share</a>
+      <a data-url="https://wysdddh.github.io/2020/05/15/MongoDB/" data-id="ckb0gqe2u0001wvs6af6hfr1y" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MongoDB/" rel="tag">MongoDB</a></li></ul>
@@ -343,7 +406,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://wysdddh.github.io/2020/05/14/mysql/" data-id="ckaqmvq7e0005v5s66ccheaai" class="article-share-link">Share</a>
+      <a data-url="https://wysdddh.github.io/2020/05/14/mysql/" data-id="ckb0gqe39000awvs65ya13q9j" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mysql/" rel="tag">mysql</a></li></ul>
@@ -407,7 +470,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://wysdddh.github.io/2020/05/13/Markdown/" data-id="ckaqmvq750001v5s64z9c0sqj" class="article-share-link">Share</a>
+      <a data-url="https://wysdddh.github.io/2020/05/13/Markdown/" data-id="ckb0gqe2y0002wvs6gevdbdfs" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Markdown/" rel="tag">Markdown</a></li></ul>
@@ -449,7 +512,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://wysdddh.github.io/2020/05/12/h5Upload/" data-id="ckaqmvq6u0000v5s6cljr6bgb" class="article-share-link">Share</a>
+      <a data-url="https://wysdddh.github.io/2020/05/12/h5Upload/" data-id="ckb0gqe320004wvs66a2s1djb" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/h5Upload/" rel="tag">h5Upload</a></li></ul>
@@ -500,7 +563,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://wysdddh.github.io/2020/05/12/hello-world/" data-id="ckaqmvq7b0004v5s63erfcgz9" class="article-share-link">Share</a>
+      <a data-url="https://wysdddh.github.io/2020/05/12/hello-world/" data-id="ckb0gqe2k0000wvs62my64ov4" class="article-share-link">Share</a>
       
       
     </footer>
@@ -523,7 +586,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mac/" rel="tag">Mac</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown/" rel="tag">Markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MongoDB/" rel="tag">MongoDB</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/h5Upload/" rel="tag">h5Upload</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mysql/" rel="tag">mysql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nginx/" rel="tag">nginx</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/npm/" rel="tag">npm</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mac/" rel="tag">Mac</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown/" rel="tag">Markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MongoDB/" rel="tag">MongoDB</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/h5Upload/" rel="tag">h5Upload</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mysql/" rel="tag">mysql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nginx/" rel="tag">nginx</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/npm/" rel="tag">npm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/redis/" rel="tag">redis</a></li></ul>
     </div>
   </div>
 
@@ -533,7 +596,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Mac/" style="font-size: 10px;">Mac</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/MongoDB/" style="font-size: 10px;">MongoDB</a> <a href="/tags/h5Upload/" style="font-size: 10px;">h5Upload</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/nginx/" style="font-size: 10px;">nginx</a> <a href="/tags/npm/" style="font-size: 10px;">npm</a>
+      <a href="/tags/Mac/" style="font-size: 10px;">Mac</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/MongoDB/" style="font-size: 10px;">MongoDB</a> <a href="/tags/h5Upload/" style="font-size: 10px;">h5Upload</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/nginx/" style="font-size: 10px;">nginx</a> <a href="/tags/npm/" style="font-size: 10px;">npm</a> <a href="/tags/redis/" style="font-size: 10px;">redis</a>
     </div>
   </div>
 
@@ -542,7 +605,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">May 2020</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">May 2020</a></li></ul>
     </div>
   </div>
 
@@ -553,6 +616,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2020/06/04/redis/">homebrew安装redis</a>
+          </li>
         
           <li>
             <a href="/2020/05/28/nginx/">nginx</a>
@@ -568,10 +635,6 @@
         
           <li>
             <a href="/2020/05/15/MongoDB/">MongoDB基本使用</a>
-          </li>
-        
-          <li>
-            <a href="/2020/05/14/mysql/">mysql基本使用</a>
           </li>
         
       </ul>
